@@ -1,3 +1,7 @@
+body{
+	background:url(../img/cenario/solo1.png);
+}
+
 .zombie1{
 	width:32px;
 	height: 32px;
@@ -19,4 +23,24 @@
 
 .ladoB{
 	transition: scaleX(-1);
+}
+.painel{
+	position: absolute;
+	width: 190px;
+	padding: 10px;
+	left: 0px;
+	bottom: 0px;
+	border-top: 1px solid #fff;
+	background-color: #fff;
+	opacity: 0.7;
+}
+
+.vidas{
+	float: left;
+}
+.cronometro{
+	float: left;
+	font-size: 20px;
+	font-weight: bold;
+
 }
