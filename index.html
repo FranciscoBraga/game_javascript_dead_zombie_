@@ -8,7 +8,11 @@
 <body onresize="ajustaTamanhopalcoJogo()">
 
 	<script type="text/javascript">
-		posicaoRandomica();
+		//tempo que um zombie ficará exposta na tela
+		setInterval(function() {
+			posicaoRandomica();
+		},1000)
+		
 	</script>
 
 </body>

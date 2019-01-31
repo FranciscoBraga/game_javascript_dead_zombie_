@@ -11,6 +11,11 @@ function ajustaTamanhopalcoJogo() {
 ajustaTamanhopalcoJogo();
 
 function posicaoRandomica() {
+
+//remover o zombie anterior caso exista
+if(document.getElementById('zombie1')){
+	document.getElementById('zombie1').remove();
+}
 	
 var posicaoX = Math.floor(Math.random() * altura)-90;
 var posicaoY = Math.floor(Math.random() * largura)-90;
@@ -26,6 +31,8 @@ zombie.className = tamanhoAleatorio() + ' '+ ladoAleatorio();
 zombie.style.left=posicaoX+'px';
 zombie.style.top=posicaoY + 'px';
 zombie.style.position='absolute';
+zombie.id ='zombie1';
+
 //incluindo os elementos no body da página
 document.body.appendChild(zombie);
 }
