@@ -14,14 +14,16 @@
 			<img id="v3" src="img/itens/corazion.png">
 			
 		</div>
-		<div class="cronometro"> Tempo Restante:</div>
+		<div class="cronometro"> Tempo Restante: <span id="cronometro"></span></div>
 	</div>
 
 	<script type="text/javascript">
+		document.getElementById('cronometro').innerHTML = tempo;
 		//tempo que um zombie ficará exposta na tela
-		setInterval(function() {
+		//tempo que um zombie ficará exposta na tela
+		var createZombie = setInterval(function() {
 			posicaoRandomica();
-		},2000)
+			},2000)
 		
 	</script>
 
