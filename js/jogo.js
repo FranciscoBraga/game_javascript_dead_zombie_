@@ -1,5 +1,6 @@
 var altura = 0;
 var largura = 0;
+var vidas = 1;
 
 function ajustaTamanhopalcoJogo() {
 	 altura = window.innerHeight;
@@ -13,8 +14,19 @@ ajustaTamanhopalcoJogo();
 function posicaoRandomica() {
 
 //remover o zombie anterior caso exista
-if(document.getElementById('zombie1')){
+if(document.getElementById('zombie1'))
+{
 	document.getElementById('zombie1').remove();
+
+	if(vidas > 3){
+		alert("Game over");
+	}
+	else{
+		document.getElementById('v'+ vidas).src = 'img/itens/corazion_vazio.png';
+
+	vidas++;
+	}
+
 }
 	
 var posicaoX = Math.floor(Math.random() * altura)-90;
@@ -32,6 +44,10 @@ zombie.style.left=posicaoX+'px';
 zombie.style.top=posicaoY + 'px';
 zombie.style.position='absolute';
 zombie.id ='zombie1';
+zombie.onclick = function clickZombie() {
+	this.remove();
+	// body...
+}
 
 //incluindo os elementos no body da página
 document.body.appendChild(zombie);
