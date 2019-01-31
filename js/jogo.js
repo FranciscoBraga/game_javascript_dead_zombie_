@@ -18,8 +18,9 @@ if(document.getElementById('zombie1'))
 {
 	document.getElementById('zombie1').remove();
 
-	if(vidas > 3){
-		alert("Game over");
+	if(vidas >= 3){
+
+		window.location.href ="game_over.html";
 	}
 	else{
 		document.getElementById('v'+ vidas).src = 'img/itens/corazion_vazio.png';
