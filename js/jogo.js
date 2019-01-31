@@ -22,7 +22,7 @@ posicaoX = posicaoX < 0 ? 0 : posicaoX;
 //criando um elemento html
 var zombie = document.createElement('img');
 zombie.src = 'img/zombie.png';
-zombie.className = tamanhoAleatorio();
+zombie.className = tamanhoAleatorio() + ' '+ ladoAleatorio();
 zombie.style.left=posicaoX+'px';
 zombie.style.top=posicaoY + 'px';
 zombie.style.position='absolute';
@@ -40,5 +40,17 @@ function tamanhoAleatorio(){
 		 return 'zombie2';
 		 case 3:
 		 return 'zombie3';
+	}
+}
+
+function ladoAleatorio(){
+		var classe = Math.floor(Math.random()*2);
+
+	switch(classe){
+		case 0: 
+		return 'ladoA';
+		 case 1:
+		 return 'ladoB';
+		
 	}
 }
