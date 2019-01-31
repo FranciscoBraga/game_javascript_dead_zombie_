@@ -22,10 +22,23 @@ posicaoX = posicaoX < 0 ? 0 : posicaoX;
 //criando um elemento html
 var zombie = document.createElement('img');
 zombie.src = 'img/zombie.png';
+zombie.className = tamanhoAleatorio();
 zombie.style.left=posicaoX+'px';
 zombie.style.top=posicaoY + 'px';
 zombie.style.position='absolute';
 //incluindo os elementos no body da página
 document.body.appendChild(zombie);
+}
 
+function tamanhoAleatorio(){
+	var classe = Math.floor(Math.random()*3);
+
+	switch(classe){
+		case 0: 
+		return 'zombie1';
+		 case 1:
+		 return 'zombie2';
+		 case 3:
+		 return 'zombie3';
+	}
 }
